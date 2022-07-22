@@ -4,7 +4,8 @@ int number =6;
 public void hellothere(){
     System.out.println("hello from outer class");
 }
-    public class InnerClass{
+
+    public static class InnerClass{
 
     int innernumber = 10;
     public void innerhellothere(){
@@ -16,7 +17,7 @@ public void hellothere(){
 public static void main(String[] args){
     OuterClass o= new OuterClass();
     o.hellothere();
-    OuterClass.InnerClass i = o.new  InnerClass();
+    OuterClass.InnerClass i = new  OuterClass.InnerClass();
     i.innerhellothere();
 
 }
